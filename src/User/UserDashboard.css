@@ -1,0 +1,218 @@
+.user-dashboard-container {
+  display: flex;
+  flex-direction: column; /* Ensures content stacks vertically */
+  align-items: center; /* Centers content horizontally */
+  padding: 20px; /* Adds padding around the container */
+  font-family: sans-serif; /* Sets a default font */
+  width: 100%; /* Occupy full width */
+  min-height: 100vh; /* Ensures it takes at least the full viewport height */
+  margin-top: 60px; /* Adjust this value if needed */
+  overflow-y: auto; /* Allows scrolling if content exceeds viewport height */
+  box-sizing: border-box; /* Ensures padding is included in width/height calculations */
+}
+
+.header {
+  margin-bottom: 20px; /* Adds space below the header */
+  font-size: 2em; 
+  text-align: center; 
+  margin-top: 20px; 
+}
+/* Approved Recipes Section */
+.approved-recipe-section {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 500px; /* Limits section height */
+  overflow: hidden; /* Prevents overflow */
+}
+
+/* Approved Recipes List - Scrollable */
+.approved-recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-height: 500px; /* Set a fixed height */
+  overflow-y: auto; /* Enable scrolling */
+  gap: 30px;
+}
+
+/* Individual Approved Recipe Item */
+.approved-recipe-item {
+  border: 2px solid #4CAF50; /* Green border for approved recipes */
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ensures Consistency with Rejected Recipes */
+.approved-recipe-list, .rejected-recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-height: 500px; /* Set a fixed height */
+  overflow-y: auto; /* Enable scrolling */
+  gap: 30px;
+}
+
+.recipe-list, .rejected-recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-height: 500px; /* Set a fixed height */
+  overflow-y: auto; /* Enable scrolling */
+  gap: 30px;
+}
+
+.recipe-list-item, .rejected-recipe-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  border: 2px solid black;
+}
+
+.recipe-image {
+  width: 100%; /* Makes the image responsive */
+  max-width: 200px; /* Ensures it doesn’t get too big */
+  height: 150px; /* Set a height to keep uniform size */
+  object-fit: cover; /* Ensures image fills the area without distortion */
+  display: block;
+}
+
+.recipe-list-item h3, .rejected-recipe-item h3 {
+  margin-top: 0; /* Removes default top margin from h3 */
+  margin-bottom: 10px; /* Adds space below the title */
+}
+
+.recipe-actions {
+  display: flex; /* Makes buttons arrange horizontally */
+  margin-top: 10px; /* Adds space above the buttons */
+}
+
+.recipe-actions button {
+  margin-right: 10px; /* Adds space between buttons */
+  padding: 8px 15px; /* Adds padding to buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.recipe-actions button:hover {
+  opacity: 0.8; /* Adds a hover effect */
+}
+
+/* Rejected Recipes Section */
+.rejected-recipe-section {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 500px; /* Limits the section height */
+  overflow: hidden; /* Prevents overflow outside */
+}
+
+/* Rejected Recipes List - Scrollable */
+.rejected-recipe-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Ensures 2 recipes per row */
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-height: 450px; /* Limits height to enable scrolling */
+  overflow-y: auto; /* Enables scrolling */
+  gap: 30px;
+}
+
+/* Individual Rejected Recipe Item */
+.rejected-recipe-item {
+  border: 2px solid #f44336; /* Red border for rejected recipes */
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Make Rejected Recipes Scroll Like Other Recipes */
+.rejected-recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-height: 500px; /* Set a fixed height */
+  overflow-y: auto; /* Enable scrolling */
+  gap: 30px;
+}
+
+.edit-recipe-form {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%; /* Adjust width as needed */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.edit-recipe-form input,
+.edit-recipe-form textarea {
+  width: calc(100% - 22px); /* Full width minus padding and border */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.edit-recipe-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-recipe-form button:hover {
+  opacity: 0.8;
+}
+
+/* Media query for smaller screens (optional) */
+@media (max-width: 768px) {
+  .user-dashboard-container {
+    width: 95%; /* Make container wider on smaller screens */
+  }
+
+  .recipe-list-item, .rejected-recipe-item {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: stretch; /* Stretch items to full width */
+  }
+
+  .recipe-image {
+    max-width: 100%; /* Make images take full width on smaller screens */
+  }
+}

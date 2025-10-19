@@ -1,0 +1,302 @@
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+body { /* Added padding for fixed header */
+  padding-top: 80px; /* Adjust this to your header height */
+}
+.star-rating {
+  display: flex;
+  gap: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.star {
+  color: gray;
+  transition: color 0.2s ease-in-out;
+}
+
+.star.filled {
+  color: gold;
+}
+
+
+/* Home Container */
+.home-container {
+  text-align: center;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  animation: fadeIn 1s ease-in-out;
+  /* Removed margin-top */
+}
+
+/* Light and Dark Themes */
+.home-container.light {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.home-container.dark {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* Header Bar */
+.header-bar {
+  width: 100%;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+
+.header-bar .app-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff5722;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.header-bar .header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-bar:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: #e64a19;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Image */
+.profile-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-img img:hover {
+  border-color: #ff5722;
+  transform: scale(1.1);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(180deg);
+  color: #ff5722;
+}
+
+.recipe-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(200px, auto); /* Ensures consistent row height */
+  gap: 20px;
+  padding: 30px;
+  overflow-y: auto; /* Enables scrolling */
+  max-height: 80vh; /* Adjust based on your design */
+  scroll-behavior: smooth;
+}
+
+
+/* Recipe Cards (if applicable for icons) */
+.recipe-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Adjust the image styling to fit better with smaller icons */
+.image-container {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the full image fits inside */
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+/* Recipe Info (optional text for icons) */
+.recipe-info {
+  padding: 10px;
+  text-align: center;
+}
+
+
+.recipe-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Read More Button */
+.read-more-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Smaller button size for better fit */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+/* Blur Effect */
+.home-content.blur {
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  animation: fadeIn 0.5s ease;
+}
+.content {
+  flex: 1; /* Pushes footer to bottom */
+  padding-bottom: 20px;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Adds space below the logo */
+}
+
+.logo {
+  width: 300px; /* Adjust the size */
+  height: 6px;
+  object-fit: contain;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ff5722;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

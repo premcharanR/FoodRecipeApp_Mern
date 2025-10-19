@@ -1,0 +1,128 @@
+/* src/pages/Login.css */
+
+/* General Styles */
+.login-container {
+  width: 100%;
+    max-width: 400px;
+    margin: 100px auto; /* Center the form on the page */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the login form is vertically centered on the page */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for hovering over the container */
+.login-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #444;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f8f9fa;
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  border-color: #2e7d32;
+  outline: none;
+  box-shadow: 0 0 10px rgba(46, 125, 50, 0.3);
+}
+
+/* Submit Button */
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #2e7d32, #1b5e20);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #88e814, #2e7d32);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(16, 230, 23, 0.3);
+}
+
+/* Error Message */
+.error-text {
+  color: #ff0101 !important;
+  font-size: 14px;
+  margin-top: 6px;
+  font-weight: bold;
+}
+
+/* Extra Links */
+.extra-links {
+  margin-top: 18px;
+}
+
+.extra-links button {
+  background: none;
+  border: none;
+  color: #141217;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  transition: color 0.3s ease-in-out;
+}
+
+.extra-links button:hover {
+  text-decoration: underline;
+  color: #d4d4d4;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-container {
+      padding: 25px;
+      max-width: 90%;
+  }
+
+  h2 {
+      font-size: 22px;
+  }
+
+  button {
+      font-size: 15px;
+      padding: 11px;
+  }
+}
