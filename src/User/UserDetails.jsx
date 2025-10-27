@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import "./UserDetails.css";
+import "./Userdetails.css";
 
 const UserDetails = () => {
     const { userId } = useParams();
