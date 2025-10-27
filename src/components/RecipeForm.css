@@ -1,0 +1,143 @@
+/* Full-page background */
+.recipe-form-container {
+    display: flex;
+    flex-direction: column; /* Stack heading and form */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(119, 130, 130);
+
+    padding: 20px;
+    overflow: hidden; /* Prevents page shift */
+  }
+  
+  /* Make form scrollable if needed */
+  .recipe-form-wrapper {
+    width: 60%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: rgba(203, 219, 217, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Heading Styling */
+  .recipe-form-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Modern Input Fields */
+  .recipe-form-container input,
+  .recipe-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: rgb(250, 246, 246);
+    color: #000000;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Placeholder Styling */
+  .recipe-form-container input::placeholder,
+  .recipe-form-container textarea::placeholder {
+    color: #666;
+    font-weight: 500;
+  }
+  
+  /* Input field focus effect */
+  .recipe-form-container input:focus,
+  .recipe-form-container textarea:focus {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* File Input Styling */
+  .recipe-form-container input[type="file"] {
+    border: none;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+  
+  /* Modern Submit Button */
+  .recipe-form-container button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #181717;
+    color: rgb(249, 249, 249);
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .recipe-form-container button:hover {
+    background: #131111;
+    transform: scale(1.05);
+  }
+  
+  /* Success & Error Message */
+  .success-message {
+    color: #4CAF50;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .error-message {
+    color: #171414;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Image Preview */
+  .image-preview {
+    margin-top: 15px;
+    text-align: center;
+    max-width: 100%; /* Ensures it fits in the form */
+  }
+  
+  .image-preview img {
+    width: 150px; /* Set fixed width */
+    max-height: 200px; /* Prevent it from covering too much space */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .image-preview img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .recipe-form-wrapper {
+      width: 90%;
+    }
+  
+    .recipe-form-container input,
+    .recipe-form-container textarea {
+      font-size: 14px;
+    }
+  
+    .recipe-form-title {
+      font-size: 26px;
+    }
+  }
+  

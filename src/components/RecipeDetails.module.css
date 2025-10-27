@@ -1,0 +1,117 @@
+/* Full-screen background with a subtle color */
+.recipe-background {
+    background: url('https://www.vitacost.com/Images/modules/FOOD_GenericHeroBanner_960x400.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Make text visible over the image */
+    text-align: center;
+    padding: 20px;
+}
+.h3{
+    color: #0b0a0a !important;
+}
+.recipe-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+   color: #0b0a0a;
+}
+/* General Text Styling */
+.recipe-info,  
+.recipe-ingredients {
+    font-size: 20px;
+    color: #0b0a0a;
+    border-radius: 8px;
+    text-align: justify;
+    line-height: 1;
+}
+
+.recipe-container {
+    background: transparent;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh; /* Restrict height */
+    overflow-y: auto; /* Enable vertical scroll */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent; /* Scrollbar color */
+}
+
+/* Align sections to the left */
+.recipe-section {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 20px;
+    color: #0b0a0a;
+}
+
+.recipe-ingredients li {
+    font-size: 20px;
+    color: #0b0a0a;
+    border-radius: 8px;
+    text-align: justify;
+    line-height: 1;
+}
+
+
+
+/* Add slight overlay for better readability */
+.recipe-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: -1;
+}
+
+
+.recipe-instructions {
+    font-size: 20px;
+    color: #0b0a0a;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: justify;
+    white-space: pre-line; /* Ensures line breaks */
+    line-height: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .recipe-container {
+        width: 90%;
+        margin: 5vh auto;
+        padding: 20px;
+    }
+
+    .recipe-title {
+        font-size: 24px;
+    }
+
+    .recipe-instructions {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-container {
+        width: 95%;
+        margin: 3vh auto;
+    }
+}
