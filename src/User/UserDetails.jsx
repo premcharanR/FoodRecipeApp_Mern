@@ -8,8 +8,7 @@ const UserDetails = () => {
     const [userData, setUserData] = useState(null);
     const [recipes, setRecipes] = useState([]);
     const [modalRecipe, setModalRecipe] = useState(null); 
-
-  
+    
     useEffect(() => {
         const fetchUserDetails = async () => {
             try {
