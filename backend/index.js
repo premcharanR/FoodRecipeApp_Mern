@@ -85,14 +85,11 @@ app.get("/testroute", (req, res) => {
   res.send("✅ Test route working!");
 });
 
-// ✅ Serve React frontend from dist folder (corrected path)
-const frontendPath = path.join(__dirname, "../dist");
-app.use(express.static(frontendPath));
-
-// Catch-all route to serve React app
-app.get("*", (req, res) => {
-  res.sendFile(path.join(frontendPath, "index.html"));
+// ✅ Temporary message for backend-only deployment
+app.get("/", (req, res) => {
+  res.send("✅ Backend deployed successfully on Railway!");
 });
+
 
 // ✅ Global error handler
 app.use((err, req, res, next) => {
